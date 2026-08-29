@@ -41,7 +41,7 @@ export const projects = [
   {
     key: 'ashoka',
     title: 'Ashoka',
-    category: 'Club Service','International Service','Public Relations','Professional Development',
+    category: ['Club Service','International Service','Public Relations','Professional Development'],
     month: 'August 2025',
     icon: '🦅',
     image: '',
