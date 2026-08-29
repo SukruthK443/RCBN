@@ -6,16 +6,17 @@ export default function Projects() {
   const [query, setQuery] = useState('');
   const [shown, setShown] = useState(PAGE_SIZE);
 
-  // only offer chips for categories that actually have projects
+  // UPDATED: Check if the category exists inside the project's 'categories' array
   const chips = useMemo(
-    () => ['All', ...categories.filter((c) => projects.some((p) => p.category === c))],
+    () => ['All', ...categories.filter((c) => projects.some((p) => p.categories?.includes(c)))],
     [],
   );
 
   const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
     return projects.filter((p) => {
-      const byChip = filter === 'All' || p.category === filter;
+      // UPDATED: Check if the selected filter chip is included in the project's categories
+      const byChip = filter === 'All' || p.categories?.includes(filter);
       const byText =
         !q ||
         p.title.toLowerCase().includes(q) ||
