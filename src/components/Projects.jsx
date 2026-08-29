@@ -6,17 +6,17 @@ export default function Projects() {
   const [query, setQuery] = useState('');
   const [shown, setShown] = useState(PAGE_SIZE);
 
-  // UPDATED: Check if the category exists inside the project's 'categories' array
+  // FIXED: Changed p.categories to p.category (singular)
   const chips = useMemo(
-    () => ['All', ...categories.filter((c) => projects.some((p) => p.categories?.includes(c)))],
+    () => ['All', ...categories.filter((c) => projects.some((p) => p.category?.includes(c)))],
     [],
   );
 
   const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
     return projects.filter((p) => {
-      // UPDATED: Check if the selected filter chip is included in the project's categories
-      const byChip = filter === 'All' || p.categories?.includes(filter);
+      // FIXED: Changed p.categories to p.category (singular)
+      const byChip = filter === 'All' || p.category?.includes(filter);
       const byText =
         !q ||
         p.title.toLowerCase().includes(q) ||
@@ -87,7 +87,6 @@ export default function Projects() {
 
                 <div className="project-body">
                   <h3>{p.title}</h3>
-                  {/* inner span is what the collapsed grid row clips */}
                   <p className="project-desc">
                     <span>{p.desc}</span>
                   </p>
