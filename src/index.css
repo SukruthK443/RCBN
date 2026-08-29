@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #f2f2f2;
+  background: radial-gradient(circle at top, #6e0d10, #0a0a0a 65%) fixed;
+  line-height: 1.6;
+}

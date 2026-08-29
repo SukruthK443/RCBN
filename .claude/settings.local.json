@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vite *)",
+      "Bash(find ~/Desktop -iname \"*GB_logo*\" 2>/dev/null | head; grep -rn \"logo1\\\\|logo2\\\\|logo3\" src/components/LogoBar.jsx)",
+      "Read(//home/shreyaskr/Desktop/**)"
+    ]
+  }
+}
