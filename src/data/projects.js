@@ -50,7 +50,7 @@ export const projects = [
   {
     key: 'dogs',
     title: 'Be - Aware of Dogs',
-    category: 'Community Service',
+    category: ['Community Service'],
     month: 'August 2025',
     icon: '🐾',
     image: '',
