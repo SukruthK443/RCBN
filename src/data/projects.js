@@ -45,7 +45,7 @@ export const projects = [
     month: 'July 2026',
     icon: '🦅',
     image: '',
-    desc: '6th Installation of Club Officials and Members or our club.',
+    desc: '6th Installation of Club Officials and Members of our club.',
   },
   {
     key: 'dogs',
