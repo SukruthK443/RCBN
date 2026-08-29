@@ -13,9 +13,9 @@ export function projectImage(fileName) {
 // Order of the filter chips. A project's `category` must be one of these.
 export const categories = [
   'Community Service',
-  'Environment',
-  'Health',
-  'Education',
+  'Professional Development',
+  'International Service',
+  'Public Relations',
   'Club Service',
 ];
 
@@ -41,9 +41,9 @@ export const projects = [
   {
     key: 'ashoka',
     title: 'Ashoka',
-    category: 'Environment',
+    category: 'Club Service','International Service','Public Relations','Professional Development',
     month: 'August 2025',
-    icon: '🌳',
+    icon: '🦅',
     image: '',
     desc: 'A community project centered on environmental awareness and conservation.',
   },
